@@ -26,6 +26,9 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
   steps:
+    - script:
+        name: bundle - nokogiri use sys lib
+        code: bundle config build.nokogiri --use-system-libraries
     - bundle-install
 
     # wercker v2に対応したpostgresql
