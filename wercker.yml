@@ -30,7 +30,7 @@ build:
         name: bundle - nokogiri use sys lib
         code: bundle config build.nokogiri --use-system-libraries
     - bundle-install
-
+        full-index: default
     # wercker v2に対応したpostgresql
     - rails-database-yml:
         service: postgresql-docker
